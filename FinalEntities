@@ -134,134 +134,134 @@
       <Longitude>-123.3861179</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-food_drink</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1008</EntityID>
+      <Name>Clarks Restaurant</Name>
+      <Description>Clarks is famous for their home made icecream.  We have over thirty flavors of milkshakes or sundaes.  We have been voted "Best Burger" in the twin harbors by the readers of the local newspaper thirteen years now. </Description>
+      <Address>731 U.S. 101, Cosmopolis WA 98537 USA</Address>
+      <Phone>360.538.1487</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1390419627/clarks-restaurant-43899.jpg</Image>
+      <Review>3</Review>
+      <Url>http://www.clarksrestaurant.com/</Url>
+      <Category>Restaurant</Category>
+      <Latitude>46.9056078</Latitude>
+      <Longitude>-123.7173502</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-accommodation</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1009</EntityID>
+      <Name>Worlds Longest Drivable Beach</Name>
+      <Description>The Long Beach Peninsula is remarkable for its continuous sand beaches on the Pacific Ocean side, 28 miles in extent, claimed to be the longest beach in the United States and the world's largest drivable beach, however is second to Cox's Bazar in Bangladesh.</Description>
+      <Address>Long Beach WA 98631 USA</Address>
+      <Phone>253.284.4423</Phone>
+      <Imagehttps://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1371211189/worlds-longest-drivable-beach-4f5e1b8046d09d675b00027d.jpg</Image>
+      <Review>4</Review>
+      <Url>http://en.wikipedia.org/wiki/Long_Beach_Peninsula</Url>
+      <Category>Beach</Category>
+      <Latitude>46.3922329</Latitude>
+      <Longitude>-124.0306964</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
+      <EntityID>1010</EntityID>
+      <Name>Peter Iredale Shipwreck</Name>
+      <Description>The Peter Iredale was a four-masted steel barque sailing vessel that ran ashore October 25, 1906, on the Oregon coast en route to the Columbia River. It was abandoned on Clatsop Spit near Fort Stevens in Warrenton about four miles (6 km) south of the Columbia River channel. Wreckage is still visible, making it a popular tourist attraction as one of the most accessible shipwrecks of the Graveyard of the Pacific.</Description>
+      <Address>Peter Iredale Road, Hammond OR 97121 USA</Address>
+      <Phone>253.284.2222</Phone>
       <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
       <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-nature</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <Url>http://www.oregonhistoryproject.org/</Url>
+      <Category>Monument</Category>
+      <Latitude>46.1791919</Latitude>
+      <Longitude>-123.9675145</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
+      <EntityID>1011</EntityID>
+      <Name>Cannon Beach</Name>
       <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-history</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <Address>3140 S Hemlock St, Cannon Beach OR 97145 USA</Address>
+      <Phone>503.436.2822</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1366377358/cannon-beach-4f2eff557f2818000100005e.jpg</Image>
+      <Review>5</Review>
+      <Url>http://en.wikipedia.org/wiki/Cannon_Beach,_Oregon</Url>
+      <Category>Beach</Category>
+      <Latitude>45.874365</Latitude>
+      <Longitude>-123.960135</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-accommodation</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1012</EntityID>
+      <Name>Surftides Lincoln City</Name>
+      <Description>Perched on the picturesque Oregon Coast in Lincoln City, the vacation begins once you pass through our gates and enter the hotel. Spacious oceanfront rooms and suites with private balconies and night-lit surf offer a soothing and inspirational experience for our guests. We have incorporated work from the finest local artisans to create an authentic regional ambience that is the cornerstone of the hotel.</Description>
+      <Address>2945 N.W. Jetty Ave., Lincoln City OR 97367 USA</Address>
+      <Phone>541.994.2191</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1367715348/surftides-lincoln-city-515eccd654b97271fa000b29.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.surftideslincolncity.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>44.9866276</Latitude>
+      <Longitude>-124.0132533</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
+      <EntityID>1013</EntityID>
+      <Name>Oregon Dunes National Recreation Area</Name>
       <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-sports</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <Address>855 U.S. 101, Reedsport OR 97467 USA</Address>
+      <Phone>541.271.3611</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1379615084/oregon-dunes-national-recreation-area-5212806f90330505a1000568.jpg</Image>
+      <Review>5</Review>
+      <Url>http://www.fs.usda.gov/recarea/siuslaw/recreation/recarea/?recid=42465</Url>
+      <Category>Attraction</Category>
+      <Latitude>43.689938</Latitude>
+      <Longitude>-124.154</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-food_drink</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1014</EntityID>
+      <Name>East 19th Street Cafe</Name>
+      <Description>Perched on the lively campus of the University of Oregon, near Mac Court, the East 19th Street Café is right in line with the latter-day-hippie vibe at U of O. Outside our front door is one of the first original peace poles, reading "May Peace Prevail on Earth" in four different languages including what has been described as "animal language." Animals, huh? Well, they did shoot the classic Belushi comedy Animal House at U of O didn't they? It all makes sense to us.</Description>
+      <Address>1485 E 19th Ave, Eugene OR 97403 USA</Address>
+      <Phone>541.342.4025</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1366650183/east-19th-street-cafe-4f2cf3177383af0001000057.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.mcmenamins.com/East19</Url>
+      <Category>CoffeeShop</Category>
+      <Latitude>44.039229</Latitude>
+      <Longitude>-123.070053</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-nature</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1015</EntityID>
+      <Name>Buckhead Nature Trail</Name>
+      <Description>The Buckhead Nature Trail is an easy 0.5 mile hike. This paved interpretive trail focuses on wildlife and wildlife habitat. The tall black cottonwoods and scattered conifers offer cover to deer and elk, while the slow, slack water supports populations of Western Pond Turtles and Oregon Chubb. Wildflowers bloom in the spring, and tangles of Himalaya blackberries wait to be picked in late summer.</Description>
+      <Address>National Forest Development Road 19, Westfir OR 97492 USA</Address>
+      <Phone>253.111.1750</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1380653356/buckhead-nature-trail-521280fc90330505a1000752.jpg</Image>
+      <Review>4</Review>
+      <Url>http://traveloregon.com/see-do/recreation/hiking/buckhead-nature-trail</Url>
+      <Category>Hike</Category>
+      <Latitude>43.765334</Latitude>
+      <Longitude>-122.4890461</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-accommodation</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1016</EntityID>
+      <Name>Pronghorn, An Auberge Resort</Name>
+      <Description>Relax in luxury accommodations while looking out on one of the most beautiful golf courses in the world. All of our Residence Club units are situated along the 18th hole of the Jack Nicklaus Signature Golf Course at Pronghorn Club and Resort. These accommodations are available for short term rental or longer term stays in Central Oregon. Each 2, 3 & 4 bedroom residence is fully furnished with exceptional interiors.</Description>
+      <Address>65600 Pronghorn Club Drive, Bend OR 97702 USA</Address>
+      <Phone>888.965.6250</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1399480784/pronghorn-an-auberge-resort-904668.jpg</Image>
+      <Review>4</Review>
+      <Url>http://pronghorn.aubergeresorts.com</Url>
+      <Category>Hotel</Category>
+      <Latitude>44.181806</Latitude>
+      <Longitude>-121.169197</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-food_drink</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1017</EntityID>
+      <Name>The Cove Palisades State Park</Name>
+      <Description>The Cove Palisades State Park is a year-round recreational destination for the entire family. Located in our high desert region, the weather is sunny and warm in the summer months and chilly but generally mild in the winter. The park is situated among towering cliffs that surround beautiful Lake Billy Chinook.</Description>
+      <Address>Terrebonne OR 97760 USA</Address>
+      <Phone>541.546.3412</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1379602602/the-cove-palisades-state-park-5212807890330505a10005c7.jpg</Image>
+      <Review>4</Review>
+      <Url>http://www.oregonstateparks.org/index.cfm?do=parkPage.dsp_parkPage&parkId=24</Url>
+      <Category>Lake</Category>
+      <Latitude>44.3400545</Latitude>
+      <Longitude>-121.1839555</Longitude>
    </Entity>
    <Entity>
       <EntityID>x</EntityID>
