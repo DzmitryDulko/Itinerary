@@ -22,7 +22,7 @@
 {
 "EntityID":"1001",
 "Name":"Cafe Brosseau",
-"Description":"A family friendly cafe where the coffee and food are local and fresh. It's named to honor the history of the building, the area, and because we like how the name sounds! To pronounce it just think "Brew-So." Appropriate for a coffee shop, n'est-ce pas?",
+"Description":"A family friendly cafe where the coffee and food are local and fresh. It's named to honor the history of the building, the area, and because we like how the name sounds! To pronounce it just think \"Brew-So.\" Appropriate for a coffee shop, n'est-ce pas?",
 "Address":"2716 North 21st Street, Tacoma WA 98406 USA",
 "Phone":"253.327.1306",
 "Image":"https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1387400473/cafe-brosseau-52b20ca86d5561f77f00002c.jpg",
@@ -141,7 +141,7 @@
 {
 "EntityID":"1008",
 "Name":"Clarks Restaurant",
-"Description":"Clarks is famous for their home made icecream.  We have over thirty flavors of milkshakes or sundaes.  We have been voted "Best Burger" in the twin harbors by the readers of the local newspaper thirteen years now. ",
+"Description":"Clarks is famous for their home made icecream.  We have over thirty flavors of milkshakes or sundaes.  We have been voted \"Best Burger\" in the twin harbors by the readers of the local newspaper thirteen years now. ",
 "Address":"731 U.S. 101, Cosmopolis WA 98537 USA",
 "Phone":"360.538.1487",
 "Image":"https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1390419627/clarks-restaurant-43899.jpg",
@@ -243,7 +243,7 @@
 {
 "EntityID":"1014",
 "Name":"East 19th Street Cafe",
-"Description":"Perched on the lively campus of the University of Oregon, near Mac Court, the East 19th Street Café is right in line with the latter-day-hippie vibe at U of O. Outside our front door is one of the first original peace poles, reading "May Peace Prevail on Earth" in four different languages including what has been described as "animal language." Animals, huh? Well, they did shoot the classic Belushi comedy Animal House at U of O didn't they? It all makes sense to us.",
+"Description":"Perched on the lively campus of the University of Oregon, near Mac Court, the East 19th Street Café is right in line with the latter-day-hippie vibe at U of O. Outside our front door is one of the first original peace poles, reading \"May Peace Prevail on Earth\" in four different languages including what has been described as \"animal language.\" Animals, huh? Well, they did shoot the classic Belushi comedy Animal House at U of O didn't they? It all makes sense to us.",
 "Address":"1485 E 19th Ave, Eugene OR 97403 USA",
 "Phone":"541.342.4025",
 "Image":"https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1366650183/east-19th-street-cafe-4f2cf3177383af0001000057.jpg",
@@ -464,7 +464,7 @@
 {
 "EntityID":"1027",
 "Name":"Cafe De France",
-"Description":"CARPE DIEM by Cafe de France is operated by Olivier, a 6th generation chef and baker. His culinary heritage dates back to 1820 when his family opened their first bakery in Northern France. The original bakery is still in existence today. "Quan minimum credule postero, Carpe Diem" (seize the day) embodies our new concept. We are still dedicated to excellent dining, rich wines, and superb service.",
+"Description":"CARPE DIEM by Cafe de France is operated by Olivier, a 6th generation chef and baker. His culinary heritage dates back to 1820 when his family opened their first bakery in Northern France. The original bakery is still in existence today. \"Quan minimum credule postero, Carpe Diem\" (seize the day) embodies our new concept. We are still dedicated to excellent dining, rich wines, and superb service.",
 "Address":"110 E. Atlantic Ave., Delray Beach, FL, 33483",
 "Phone":"561.455.2140",
 "Image":"https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/cafe-de-france-504e1e1b1d45e04c200005a1.jpg",
@@ -737,7 +737,7 @@
 "EntityID":"1043",
 "Name":"Wild Horses Monument",
 "Description":" Artist David Govedare’s life size sculptures, added during Washington State's Centennial Celebration, are entitled Grandfather Cuts Loose the Ponies. Hoping to capture the mystical spirits of a time that has passed, this 200 foot line of steel ponies remind us all of time when creatures were able to roam wild and free.",
-"Address":"From Ellensburg drive east on Interstate 90 to exit 139 (just after crossing the Columbia River). The exit, signed "Scenic Viewpoint," leads to a large parking area. In winter, park at the closed gate and walk in. In any season, though, stop here for a quiet, relaxing, hour-long break when traveling across the state on I-90.",
+"Address":"From Ellensburg drive east on Interstate 90 to exit 139 (just after crossing the Columbia River). The exit, signed \"Scenic Viewpoint,\" leads to a large parking area. In winter, park at the closed gate and walk in. In any season, though, stop here for a quiet, relaxing, hour-long break when traveling across the state on I-90.",
 "Phone":"206.625.1367",
 "Image":"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1/p320x320/1234331_502373896511066_1791014429_n.jpg",
 "Review":"4",
@@ -771,7 +771,7 @@
 "EntityID":"1045",
 "Name":"Palouse Falls",
 "Description":"Its size and splendor make Palouse Falls one of the most scenic and impressive waterfalls in all of Washington, but its location adds even more magic and wonder to its image.",
-"Address":"From Dayton, drive US 12 north for 14 miles. Turn left on State Route 261 and continue through the tiny community of Starbuck (sorry, the only coffee here is usually day-old Hills Brothers at the small cafe). You'll also pass Lyons Ferry Park at 14.7 miles. At 20.5 miles from US 12, turn right onto Palouse Falls Road signed "Palouse Falls State Park--2." Drive down the hill 2.4 miles to enter the park and to park.",
+"Address":"From Dayton, drive US 12 north for 14 miles. Turn left on State Route 261 and continue through the tiny community of Starbuck (sorry, the only coffee here is usually day-old Hills Brothers at the small cafe). You'll also pass Lyons Ferry Park at 14.7 miles. At 20.5 miles from US 12, turn right onto Palouse Falls Road signed \"Palouse Falls State Park--2.\" Drive down the hill 2.4 miles to enter the park and to park.",
 "Phone":"502.633.0770",
 "Image":"http://brianruebphotography.com/wp-content/uploads/Palouse-Falls.jpg",
 "Review":"4",
