@@ -121,7 +121,7 @@
 		var idsequence = 0;
 
 		// 10 miles are 0.14 degrees of latitude and 0.21 degrees of longitude near Seattle. Let's take 0.17 for both
-		var distance = 0.17;
+		var distance = 1.7;
 		var dist2 = distance * distance;
 		
 		var polyline = [];
@@ -168,14 +168,7 @@
 				showDashboard: false
             });
 
-            MM.Events.addHandler(map, 'click', clearInfoBox);
             Resize();
-        }
-
-        function clearInfoBox(e) {
-            if (e.targetType == "map") {
-                infoBoxLayer.clear();
-            }
         }
 
         function createDirectionsManager(directionsUpdatedCallback) {
@@ -196,7 +189,7 @@
         }
 
         function createDrivingRoute() {
-            var directionsManager = createDirectionsManager(FindEntitiesNearRoute);
+            var directionsManager = createDirectionsManager(ApproximateRoute);
 			directionsManager.clearDisplay();
             var options = directionsManager.getRequestOptions();
             options.routeDraggable = false;
@@ -210,7 +203,6 @@
             directionsManager.addWaypoint(myEnd);
             directionsManager.setRequestOptions(options);
             directionsManager.calculateDirections();
-            map.getCredentials(RouteRequest);
         }
 
         function createDirections() {
@@ -226,7 +218,6 @@
 				"icon" : "icons/B.png"
 			}];
 			$(".list-attraction").loadTemplate($("#attractionTemplate"), selectedLocations);
-			document.getElementById("rightPanel").style.visibility = "visible";
         }
 
         function Resize() {
@@ -289,7 +280,9 @@
 					var d2 = dx * dx + dy * dy;
 					var segment = {ax: ax, bx: bx, ay: ay, by: by, dx: dx, dy: dy, d2: d2};
 					segments.push(segment);
-				}   
+				}
+
+				FindEntitiesNearRoute();
             }
         }
 
@@ -360,6 +353,14 @@
 			}
         }
 
+        function ApproximateRoute(result) {
+            //startLat = result.route[0].routeLegs[0].startWaypointLocation.latitude;
+            //startLon = result.route[0].routeLegs[0].startWaypointLocation.longitude;
+            //endLat = result.route[0].routeLegs[0].endWaypointLocation.latitude;
+            //endLon = result.route[0].routeLegs[0].endWaypointLocation.longitude;
+            map.getCredentials(RouteRequest);
+        }
+
         function FindEntitiesNearRoute()
 		{
 			try {
@@ -404,6 +405,7 @@
 				map.entities.push(infoBoxLayer);
 
 				document.getElementById("cats").style.visibility = "visible";
+				document.getElementById("rightPanel").style.visibility = "visible";
 			}
 			catch (err) {
 			}
