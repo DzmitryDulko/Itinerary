@@ -190,7 +190,7 @@ console.dir( selectedLocations );
         }
 
         function clearInfoBox(e) {
-            if (e.targetType == "map") {
+            if (e.targetType == "map" && infoBoxLayer != null) {
                 infoBoxLayer.clear();
             }
         }
@@ -343,7 +343,8 @@ console.dir( selectedLocations );
 
 		   directionsManager.calculateDirections();
 
-		   //window.setTimeout("map.setView( {bounds:prevRect} )",1000);
+		    //window.setTimeout("map.setView( {bounds:prevRect} )",1000);
+		   //ApproximateRoute();
 		}
 		
 		function updatePanel(button) {
@@ -388,7 +389,7 @@ console.dir( selectedLocations );
         function FindEntitiesNearRoute()
 		{
 			try {
-				try {
+			    try {
 					entitiesLayer.clear();
 					infoBoxLayer.clear();
 				}
@@ -488,6 +489,11 @@ console.dir( selectedLocations );
 					var id = $(this).attr("id");
 					var routeInfo = savedRoutes[id];
 					selectedLocations = routeInfo.selectedLocations;
+
+					$('#txtStart').val(selectedLocations[0].name);
+					startName = selectedLocations[0].name;
+					$('#txtEnd').val( selectedLocations[selectedLocations.length - 1].name );
+					endName = selectedLocations[selectedLocations.length - 1].name;
 					rebuildRoute( null );					
 				}
 			);
