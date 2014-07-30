@@ -427,6 +427,8 @@ console.dir( selectedLocations );
 
 				document.getElementById("cats").style.visibility = "visible";
 				document.getElementById("rightPanel").style.visibility = "visible";
+				
+				$("#cats").find(':checkbox').each(function() {handleCategoryChanged(this);} );
 			}
 			catch (err) {
 			}
