@@ -124,7 +124,7 @@
 		var idsequence = 0;
 
 		// 10 miles are 0.14 degrees of latitude and 0.21 degrees of longitude near Seattle. Let's take 0.17 for both
-		var distance = 0.17;
+		var distance = 2.0;
 		var dist2 = distance * distance;
 		
 		var polyline = [];
@@ -571,14 +571,14 @@ console.dir( selectedLocations );
          <div style='position:absolute; top:15px; left:5px;'>
              <div class="input-group">
                  <span class="input-group-addon" style='margin-left:10px;'>From</span>
-                 <input id="txtStart" type="text" class="form-control" value="Seattle" style='width:200px;'/>
+                 <input id="txtStart" type="text" class="form-control" value="Seattle" style="width:200px;" onkeydown="if (event.keyCode == 13) document.getElementById('buildRoute').click()"/>
              </div>
              <div class="input-group" style='margin-top:2px';>
                  <span class="input-group-addon" style='margin-left:10px;width:58px'>To</span>
-                 <input id="txtEnd" type="text" class="form-control" value="Portland,WA" style='width:200px;'/>
+                 <input id="txtEnd" type="text" class="form-control" value="Portland,WA" style="width:200px;" onkeydown="if (event.keyCode == 13) document.getElementById('buildRoute').click()"/>
              </div>
              <div class="btn-group">
-                 <button type="button" class="btn btn-default" onclick="createDirections();" style='width:260px;margin-top:2px'>Build a route</button>
+                 <button type="button" id="buildRoute" class="btn btn-default" onclick="createDirections();" style='width:260px;margin-top:2px'>Build a route</button>
              </div>
          </div>
              <ul class="list-group" id="cats" style="position:absolute; top:123px; left:5px; width:260px; opacity:.9; visibility:hidden;">
