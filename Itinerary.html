@@ -23,12 +23,15 @@
 		</li>
 	</script>
 	<script type="text/html" id="savedRouteTemplate">
-		<li class="media" data-id="routeId">
+		<li class="media route-list-el li-route-list-entry" data-id="routeId">
 			<a class="pull-left" href="#">
 				<img class="media-object" src="icons/route.png">
 			</a>
-			<div class="media-body">
-				<h4 class="media-heading" data-content="routeName"></h4>
+			<div class="media-body row">
+				<h5 class="media-heading" data-content="routeName" style="float:left; overflow:hidden; text-overflow:ellipsis" ></h5>
+				<button type="button" class="btn btn-default btn-sm link-to-route-button" style="margin-left:5px" >
+					<span class="glyphicon glyphicon-link"></span>
+				</button>
 			</div>
 		</li>
 	</script>
@@ -151,6 +154,16 @@
 
 		function load()
 		{
+			//If route was provided in URL
+			var tokens = document.URL.split('#');
+			if (tokens.length > 1) {
+				var encodedDataString = tokens[1];					
+				var routeInfo = decodeRoute( encodedDataString );
+				//Setup provided route
+				selectedLocations = routeInfo.selectedLocations;
+				rebuildRoute( null );
+			}
+
 			GetMap();
 			$.getJSON( "data.json", function( data ) {
 				entities = data.EntitiesSample.Entity;
@@ -444,6 +457,57 @@
 			}			
 			
 			$(".list-routes").loadTemplate($("#savedRouteTemplate"), savedRoutesArray );
+			$(".link-to-route-button").bind("click", function() {
+					var id = $(this).parent().parent().attr("id");
+					var routeInfo = savedRoutes[id];
+					
+					var documentServerURLPart = document.URL.split('#')[0];
+					var resultURL = documentServerURLPart + '#' + encodeRoute( routeInfo );
+					
+					alert(resultURL);
+					
+				}
+			);
+						
+			$(".li-route-list-entry").click( function() {
+					$(".li-route-list-entry").css("background", "white");
+					$(this).css("background", "#33CCFF" );
+					var id = $(this).attr("id");
+					var routeInfo = savedRoutes[id];
+					selectedLocations = routeInfo.selectedLocations;
+					rebuildRoute( null );					
+				}
+			);
+		}
+		
+		function setCurrentRoute( routeInfo ) {
+			selectedLocations = routeInfo.selectedLocations;
+			rebuildRoute( null );
+		}
+		
+		function encodeRoute( routeInfo ) {
+			var str = [];
+			for(var p in obj)
+				if (obj.hasOwnProperty(p)) {
+					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+				}
+			return str.join("&");
+		}
+		
+		function decodeRoute( encodedDataString ) {
+			var decodedDataString = decodeURIComponent(encodedDataString);
+
+			var match,
+			pl     = /\+/g,  // Regex for replacing addition symbol with a space
+			search = /([^&=]+)=?([^&]*)/g,
+			decode = function (s) { return decodeURIComponent(decodedDataString.replace(pl, " ")); },
+			query  = window.location.search.substring(1);
+
+			urlParams = {};
+			while (match = search.exec(query))			
+				urlParams[decode(match[1])] = decode(match[2]);		
+				
+			return urlParams;
 		}
 		
 		function handleCategoryChanged(element) {
@@ -574,12 +638,15 @@
 			</ul>
 			<div class="btn-group"  >
 				<button type="button" class="btn btn-default" onclick="saveSelectedRoute();">Save</button>
-				<button type="button" class="btn btn-default" onclick="shareSelectedRoute();">Share</button>
+				<!-- <button type="button" class="btn btn-default" onclick="shareSelectedRoute();">Share</button> -->
 			</div>
-			<div>
-				<ul class="media-list list-routes">
-				</ul>		
-			</div>			
+			<div style="margin-top:15px; border:1px solid #BDBDBD; border-radius:3px;">
+				<div style="margin-top:4px; margin-left:4px" >Saved routes</div>
+				<div>
+					<ul class="media-list list-routes">
+					</ul>		
+				</div>				
+			</div>
 		</div>
 	</div>
 	</body>
