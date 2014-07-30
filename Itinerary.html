@@ -124,7 +124,7 @@
 		var idsequence = 0;
 
 		// 10 miles are 0.14 degrees of latitude and 0.21 degrees of longitude near Seattle. Let's take 0.17 for both
-		var distance = 1.7;
+		var distance = 0.17;
 		var dist2 = distance * distance;
 		
 		var polyline = [];
@@ -154,20 +154,24 @@
 
 		function load()
 		{
+			GetMap();
+			$.getJSON( "data-from-xml.json", function( data ) {
+				entities = data.EntitiesSample.Entity;
+			});
+			
 			//If route was provided in URL
 			var tokens = document.URL.split('#');
 			if (tokens.length > 1) {
 				var encodedDataString = tokens[1];					
+alert( encodedDataString );
 				var routeInfo = decodeRoute( encodedDataString );
+alert( routeInfo );				
+console.dir( routeInfo );
 				//Setup provided route
 				selectedLocations = routeInfo.selectedLocations;
-				rebuildRoute( null );
-			}
-
-			GetMap();
-			$.getJSON( "data.json", function( data ) {
-				entities = data.EntitiesSample.Entity;
-			});
+console.dir( selectedLocations );				
+				rebuildRoute();
+			}			
 		}
 
         function GetMap() {
@@ -313,8 +317,8 @@
                map.setView( {bounds:prevRect} );
         }
 
-		function rebuildRoute(button) {
-		   var directionsManager = createDirectionsManager(null);
+		function rebuildRoute() {
+		   var directionsManager = createDirectionsManager( ApproximateRoute );
 
 		   var options = directionsManager.getRequestOptions();
 		   options.routeDraggable = false;
@@ -369,7 +373,7 @@
 
         function onAddToRoute(button) {
 			if(updatePanel(button)) {
-				rebuildRoute(button);
+				rebuildRoute();
 			}
         }
 
@@ -464,9 +468,11 @@
 			}			
 			
 			$(".list-routes").loadTemplate($("#savedRouteTemplate"), savedRoutesArray );
-			$(".link-to-route-button").bind("click", function() {
+			$(".link-to-route-button").bind("click", function(e) {
 					var id = $(this).parent().parent().attr("id");
 					var routeInfo = savedRoutes[id];
+					
+					e.stopPropagation();
 					
 					var documentServerURLPart = document.URL.split('#')[0];
 					var resultURL = documentServerURLPart + '#' + encodeRoute( routeInfo );
@@ -494,21 +500,21 @@
 		
 		function encodeRoute( routeInfo ) {
 			var str = [];
-			for(var p in obj)
-				if (obj.hasOwnProperty(p)) {
-					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+			for(var p in routeInfo)
+				if (routeInfo.hasOwnProperty(p)) {
+					str.push(encodeURIComponent(p) + "=" + encodeURIComponent(routeInfo[p]));
 				}
 			return str.join("&");
 		}
 		
 		function decodeRoute( encodedDataString ) {
-			var decodedDataString = decodeURIComponent(encodedDataString);
+			//var decodedDataString = decodeURIComponent(encodedDataString);
 
 			var match,
 			pl     = /\+/g,  // Regex for replacing addition symbol with a space
 			search = /([^&=]+)=?([^&]*)/g,
-			decode = function (s) { return decodeURIComponent(decodedDataString.replace(pl, " ")); },
-			query  = window.location.search.substring(1);
+			decode = function (s) { return decodeURIComponent(encodedDataString.replace(pl, " ")); },
+			query  = encodedDataString;
 
 			urlParams = {};
 			while (match = search.exec(query))			
