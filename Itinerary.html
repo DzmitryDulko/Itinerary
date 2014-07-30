@@ -84,7 +84,7 @@
     </style>
     <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
     <script type="text/javascript">
-        window.onload = GetMap;
+        window.onload = load;
         window.onresize = Resize;
 
         var bmKey = "Al_MYHnzKW2V2HbZSprQ5i9C8SeZE5lvx5q9E_WtSAoKRJCg666TgjpeHYCyfED1";
@@ -119,6 +119,13 @@
 		var savedRoutes = {};
 		
 		var idsequence = 0;
+
+		// 10 miles are 0.14 degrees of latitude and 0.21 degrees of longitude near Seattle. Let's take 0.17 for both
+		var distance = 0.17;
+		var dist2 = distance * distance;
+		
+		var polyline = [];
+		var segments = [];
 		
 		function getNextId() {
 			return idsequence++;
@@ -139,6 +146,16 @@
 
         var pinpointsLocations = {};
         var pinpointsCategories = {};
+
+		var entities;
+
+		function load()
+		{
+			GetMap();
+			$.getJSON( "data.json", function( data ) {
+				entities = data.EntitiesSample.Entity;
+			});
+		}
 
         function GetMap() {
             map = new MM.Map(document.getElementById('myMap'), { 
@@ -228,34 +245,14 @@
             }
         }
 
-        function FindEntitiesNearRoute(result) {
-            startLat = result.route[0].routeLegs[0].startWaypointLocation.latitude;
-            startLon = result.route[0].routeLegs[0].startWaypointLocation.longitude;
-            endLat = result.route[0].routeLegs[0].endWaypointLocation.latitude;
-            endLon = result.route[0].routeLegs[0].endWaypointLocation.longitude;
-            map.getCredentials(EntitiesRequest);
-        }
-
-        function EntitiesRequest(credentials) {
-            var request = "https://spatial.virtualearth.net/REST/v1/data/94a48ef1f12e4baf8a92be6c0e6cc78d/Entities8/Entity?" +
-                "key=" + credentials + 
-                "&$format=json" +
-                "&jsonp=callbackFindEntitiesNearRoute" +
-                "&spatialFilter=nearroute('" +
-                    startLat + "," +
-                    startLon + "','" +
-                    endLat + "," +
-                    endLon + "')";
-
-            CallRestService(request);
-        }
-
         function RouteRequest(credentials) {
-            var request = "http://dev.virtualearth.net/REST/v1/Routes?" +
-                "wayPoint.1=" + startName +
-                "&wayPoint.2=" + endName +
+            var request = "http://dev.virtualearth.net/REST/V1/Routes/Driving?" +
+                "wp.0=" + startName +
+                "&wp.1=" + endName +
                 "&key=" + credentials +
-                "&$format=json" +
+                "&rpo=Points" +
+                "&tl=0.05" +
+                "&o=json" +
                 "&jsonp=callbackRoute";
 
             CallRestService(request);
@@ -273,6 +270,25 @@
                var viewBoundaries = Microsoft.Maps.LocationRect.fromLocations(new Microsoft.Maps.Location(bbox[0], bbox[1]), new Microsoft.Maps.Location(bbox[2], bbox[3]));
                viewBoundaries.width *= windowWidth / (windowWidth - 700);
                map.setView({ bounds: viewBoundaries });
+   
+				var points = result.resourceSets[0].resources[0].routePath.line.coordinates;
+				var indices = result.resourceSets[0].resources[0].routePath.generalizations[0].pathIndices;
+				polyline = [];
+				for (var i = 0; i < indices.length; ++i)
+					polyline.push(points[indices[i]]);
+				segments = [];
+				for (var i = 1; i < polyline.length; ++i)
+				{
+					var ax = polyline[i - 1][0];
+					var bx = polyline[i][0];
+					var dx = bx - ax;
+					var ay = polyline[i - 1][1];
+					var by = polyline[i][1];
+					var dy = by - ay;
+					var d2 = dx * dx + dy * dy;
+					var segment = {ax: ax, bx: bx, ay: ay, by: by, dx: dx, dy: dy, d2: d2};
+					segments.push(segment);
+				}   
             }
         }
 
@@ -343,55 +359,57 @@
 			}
         }
 
-        function callbackFindEntitiesNearRoute(result) {
-            if (result && result.d && result.d.results) {
-                try {
-                    try {
-                        entitiesLayer.clear();
-                        infoBoxLayer.clear();
-                    }
-                    catch (err) {
-                        entitiesLayer = new MM.EntityCollection;
-                        infoBoxLayer = new MM.EntityCollection;
-                    }
+        function FindEntitiesNearRoute()
+		{
+			try {
+				try {
+					entitiesLayer.clear();
+					infoBoxLayer.clear();
+				}
+				catch (err) {
+					entitiesLayer = new MM.EntityCollection;
+					infoBoxLayer = new MM.EntityCollection;
+				}
 
-                    for (i = 0; i < result.d.results.length; i++) {
-						var pushpinOptions = { icon:"icons/" + result.d.results[i].Category + ".png", height: 37, width: 32, anchor: new MM.Point(15, 15) };
-                        var pushpin = new MM.Pushpin(new MM.Location(result.d.results[i].Latitude, result.d.results[i].Longitude), pushpinOptions);
-                        pushpin.title = '<font size="5"><b>' + result.d.results[i].Name + '</b>' + ' (' + result.d.results[i].Category + ')</font>';
-                        var id = 'pinpoint_' + i;
-                        pinpointsLocations[id] = pushpin.getLocation();
-                        pushpin.id = id;
-                        pushpin.category = result.d.results[i].Category;
-                        foundAttractionsInfo[id] = result.d.results[i];
-                        pushpin.html =
-							'<div style = "background-color: #ffffff;width:500px;border-radius: 20px;opacity:0.9;padding: 10px;">' +
-							pushpin.title + 
-							'<img src="' + result.d.results[i].Image + '" alt="Image" height="130" width="300">' + '<br><br>'  +
-                            '<b>Description</b>: ' + result.d.results[i].Description + '<br><br>' +
-                            '<b>Address</b>: ' + result.d.results[i].Address + '<br><br>' +
-                            '<b>Phone</b>: ' + result.d.results[i].Phone + '<br><br>' +
-                            '<b>Url</b>:  ' +  '<br><a href="' + result.d.results[i].Url + '">' + result.d.results[i].Url + '</a><br><br>'  +
-                            '<button title="Add this place to your itenerary" id="' + id + '" type="button" onclick="onAddToRoute(' + id + ');"><img src="icons/add.png" height=32 width=32></button>' +
-							'</div>';
-                        pushpinClick = MM.Events.addHandler(pushpin, 'click', showInfoBox);
-                        entitiesLayer.push(pushpin);
-                    }
-                    map.entities.push(entitiesLayer);
-                    map.entities.push(infoBoxLayer);
+				var entitiesNear = entities.filter(function (entity) {
+					return (isCloseToPolyline(entity.Latitude, entity.Longitude));
+				});
 
-                    document.getElementById("cats").style.visibility = "visible";
-                }
-                catch (err) {
-                }
-                var script;
-                while (script = document.getElementById('JSONP')) {
-                    script.parentNode.removeChild(script);
-                }
-            }
-            else {
-                alert('error');
-            }
+				
+				for (i = 0; i < entitiesNear.length; i++) {
+					var entity = entitiesNear[i];
+					var pushpinOptions = { icon:"icons/" + entity.Category + ".png", height: 37, width: 32, anchor: new MM.Point(15, 15) };
+					var pushpin = new MM.Pushpin(new MM.Location(entity.Latitude, entity.Longitude), pushpinOptions);
+					pushpin.title = '<font size="5"><b>' + entity.Name + '</b>' + ' (' + entity.Category + ')</font>';
+					var id = 'pinpoint_' + i;
+					pinpointsLocations[id] = pushpin.getLocation();
+					pushpin.id = id;
+					pushpin.category = entity.Category;
+					foundAttractionsInfo[id] = entity;
+					pushpin.html =
+						'<div style = "background-color: #ffffff;width:500px;border-radius: 20px;opacity:0.9;padding: 10px;">' +
+						pushpin.title + 
+						'<img src="' + entity.Image + '" alt="Image" height="130" width="300">' + '<br><br>'  +
+						'<b>Description</b>: ' + entity.Description + '<br><br>' +
+						'<b>Address</b>: ' + entity.Address + '<br><br>' +
+						'<b>Phone</b>: ' + entity.Phone + '<br><br>' +
+						'<b>Url</b>:  ' +  '<br><a href="' + entity.Url + '">' + entity.Url + '</a><br><br>'  +
+						'<button title="Add this place to your itenerary" id="' + id + '" type="button" onclick="onAddToRoute(' + id + ');"><img src="icons/add.png" height=32 width=32></button>' +
+						'</div>';
+					pushpinClick = MM.Events.addHandler(pushpin, 'click', showInfoBox);
+					entitiesLayer.push(pushpin);
+				}
+				map.entities.push(entitiesLayer);
+				map.entities.push(infoBoxLayer);
+
+				document.getElementById("cats").style.visibility = "visible";
+			}
+			catch (err) {
+			}
+			var script;
+			while (script = document.getElementById('JSONP')) {
+				script.parentNode.removeChild(script);
+			}
         }
 
         function showInfoBox(e) {
@@ -432,6 +450,31 @@
 		            pin.setOptions({visible: element.checked});
 		        //alert(pinpointsCategories[pin.id]);
 		    }
+		}
+		
+		function isCloseToSegment(x, y, segment)
+		{
+			var t = (segment.dx * (segment.ax - x) + segment.dy * (segment.ay - y)) / segment.d2;
+			if (t < 0 || t > 1) return false;
+			var tmp = segment.dx * (segment.by - y) - segment.dy * (segment.bx - x);
+			return (tmp * tmp < segment.d2 * dist2);
+		}
+
+		function isCloseToPolyline(x, y)
+		{
+			for (var i = 0; i < polyline.length; ++i)
+			{
+				var dx = polyline[i][0] - x;
+				var dy = polyline[i][1] - y;
+				if (dx * dx + dy * dy < dist2) return true;
+			}
+			
+			for (var i = 0; i < segments.length; ++i)
+			{
+				if (isCloseToSegment(x, y, segments[i])) return true;
+			}
+			
+			return false;
 		}
 
     </script>
