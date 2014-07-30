@@ -65,7 +65,7 @@
 				top:10px;
 				width:250px;
 
-				border-radius: 20px;
+				border-radius: 10px;
 				opacity:0.9;
 		}
 	</style>
@@ -480,76 +480,72 @@
     </script>
 </head>
  <body>
-    <div id='myMap' style="position:absolute; top:0px; left:0px; width:300px; height:300px;"></div>
-    <div style='position:absolute; top:15px; left:5px;width:300px; height: 300px;'>
-        <table style='width:100%; border-collapse:separate; border-spacing:5px;' >
-             <tr padding-bottom="10px" padding-top="10px">
-                <td style='width:70px;'>Start</td>
-                <td><input id="txtStart" type="text" style='width:230px;' value="Seattle"/></td>
-            </tr>
-            <tr>
-                <td style='width:70px;'>End</td>
-                <td><input id="txtEnd" type="text" style='width:230px;' value="Spokane"/></td>
-            </tr>
-            <tr>
-                <td colspan='2'><input type="button" value="Get Directions" style="width:100%;" onclick="createDirections();" /></td>
-            </tr>
-			<tr>
-				<td colspan='2'>
-					<ul class="list-group" id="cats" style="width:100%;opacity:.8;visibility:hidden;">
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="Attraction" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Attractions</label>
-							<img src="icons/attraction.png" style="float:right;"/>
-						  </div>
-					  </li>
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="Park" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Parks</label>
-							<img src="icons/park.png" style="float:right;"/>
-						  </div>
-					  </li>
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="CoffeeShop" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Coffee shops</label>
-							<img src="icons/coffeeshop.png" style="float:right"/>
-						  </div>
-					  </li>
-					 <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="Hike" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Hikes</label>
-							<img src="icons/hike.png" style="float:right;"/>
-						  </div>
-					  </li>
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="Monument" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Monuments</label>
-							<img src="icons/monument.png" style="float:right;"/>
-						  </div>
-					  </li>
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="Museum" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Museums</label>
-							<img src="icons/museum.png" style="float:right;"/>
-						  </div>
-					  </li>
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label><input type="checkbox" id="Waterfall" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Waterfalls</label>
-							<img src="icons/waterfall.png" style="float:right;"/>
-						  </div>
-					  </li>
-					  <li class="list-group-item list-group-item-new">
-						  <div class="checkbox checkbox-new">
-							<label> <input type="checkbox" id="Restaurant" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Restraurants</label>
-							<img src="icons/restaurant.png" style="float:right;"/>
-						  </div>
-					  </li>
-					 </ul>
-              </td>
-			</tr>
-        </table>
-    </div>
+     <div id='myMap' style="position:absolute; top:0px; left:0px; width:300px; height:300px;"></div>
+     
+         <div style='position:absolute; top:15px; left:5px;'>
+             <div class="input-group">
+                 <span class="input-group-addon" style='margin-left:10px;'>From</span>
+                 <input id="txtStart" type="text" class="form-control" value="Seattle" style='width:200px;'/>
+             </div>
+             <div class="input-group" style='margin-top:2px';>
+                 <span class="input-group-addon" style='margin-left:10px;width:58px'>To</span>
+                 <input id="txtEnd" type="text" class="form-control" value="Spokane" style='width:200px;'/>
+             </div>
+             <div class="btn-group">
+                 <button type="button" class="btn btn-default" onclick="createDirections();" style='width:260px;margin-top:2px'>Build a route</button>
+             </div>
+         </div>
+             <ul class="list-group" id="cats" style="position:absolute; top:123px; left:5px; width:260px; opacity:.9; visibility:hidden;">
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Attraction" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Attractions</label>
+                         <img src="icons/attraction.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Park" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Parks</label>
+                         <img src="icons/park.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="CoffeeShop" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Coffee shops</label>
+                         <img src="icons/coffeeshop.png" style="float:right"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Hike" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Hikes</label>
+                         <img src="icons/hike.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Monument" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Monuments</label>
+                         <img src="icons/monument.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Museum" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Museums</label>
+                         <img src="icons/museum.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label><input type="checkbox" id="Waterfall" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Waterfalls</label>
+                         <img src="icons/waterfall.png" style="float:right;"/>
+                     </div>
+                 </li>
+                 <li class="list-group-item list-group-item-new">
+                     <div class="checkbox checkbox-new">
+                         <label> <input type="checkbox" id="Restaurant" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Restraurants</label>
+                         <img src="icons/restaurant.png" style="float:right;"/>
+                     </div>
+                 </li>
+             </ul>
+
 	<div class="panel panel-default" style="visibility:hidden;" id="rightPanel">
 		<div class="panel-body">
 			<p><font size=4 color=black><b>Your itinerary:</b></font></p>
