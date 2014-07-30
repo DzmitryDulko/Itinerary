@@ -194,7 +194,7 @@
             var options = directionsManager.getRequestOptions();
             options.routeDraggable = false;
             directionsManager.resetDirections();
-            directionsManager.setRenderOptions({ autoUpdateMapView: false });
+            directionsManager.setRenderOptions({ autoUpdateMapView: true });
 			startName = document.getElementById('txtStart').value;
             var myStart = new MM.Directions.Waypoint({ address:startName });
             directionsManager.addWaypoint(myStart);
@@ -203,7 +203,6 @@
             directionsManager.addWaypoint(myEnd);
             directionsManager.setRequestOptions(options);
             directionsManager.calculateDirections();
-            map.getCredentials(RouteRequest);
         }
 
         function createDirections() {
@@ -544,6 +543,24 @@
                          <img src="icons/restaurant.png" style="float:right;"/>
                      </div>
                  </li>
+				<li class="list-group-item list-group-item-new">
+					<div class="checkbox checkbox-new">
+					<label> <input type="checkbox" id="Hotel" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Hotels</label>
+					<img src="icons/hotel.png" style="float:right;"/>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-new">
+					<div class="checkbox checkbox-new">
+					<label> <input type="checkbox" id="Beach" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Beaches</label>
+					<img src="icons/beach.png" style="float:right;"/>
+					</div>
+				</li>
+				<li class="list-group-item list-group-item-new">
+					<div class="checkbox checkbox-new">
+					<label> <input type="checkbox" id="Lake" checked="true" style="margin-top:11px;" onclick="handleCategoryChanged(this);">Lakes</label>
+					<img src="icons/lake.png" style="float:right;"/>
+					</div>
+				</li>
              </ul>
 
 	<div class="panel panel-default" style="visibility:hidden;" id="rightPanel">
