@@ -1,5 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Entities>
+<?xml version="1.0" standalone="yes"?>
+<EntitiesSample>
+  <xs:schema id="EntitiesSample" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="EntitiesSample" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Entity">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EntityID" type="xs:string"/>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Address" type="xs:string" minOccurs="0" />
+                <xs:element name="Phone" type="xs:string" minOccurs="0" />
+                <xs:element name="Image" type="xs:string" minOccurs="0" />
+                <xs:element name="Review" type="xs:string" minOccurs="0" />
+                <xs:element name="Url" type="xs:string" minOccurs="0" />
+            <xs:element name="Category" type="xs:string" minOccurs="0" />
+                <xs:element name="Latitude" type="xs:double" minOccurs="0" />
+                <xs:element name="Longitude" type="xs:double" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Entity" />
+        <xs:field xpath="EntityID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
    <Entity>
       <EntityID>1000</EntityID>
       <Name>Museum of Glass</Name>
@@ -92,17 +121,17 @@
       <Longitude>-122.965534</Longitude>
    </Entity>
    <Entity>
-      <EntityID>x</EntityID>
-      <Name>Museum of Glass</Name>
-      <Description>blah</Description>
-      <Address>1801 Dock Street, Tacoma, WA, 98421 2716 North 21st Street, Tacoma, WA, 98406 4411 Martin Way East, Olympia, WA, 98516 113 4th Ave W, Olympia, WA, 98501 20500 Old Highway 99 SW, Grand Mound, 98531, WA 1101 SW Sylvenus St., Chehalis, WA, 98532 1001 W Main St, Centralia, WA, 98531 801 E Main Street, Elma, WA, 98541 731 U.S. 101, Cosmopolis, WA, 98537 4415 Pacific Way, Seaview, WA, 98644 Long Beach, WA, 98631 Peter Iredale Road, Hammond, OR, 97121 1157 N Marion Ave., Gearhart, OR, 97138 3140 S Hemlock St, Cannon Beach, OR, 97145 288 Laneda Avenue, Manzanita, 97130 Rockaway Beach , OR 215 S Pacific St  , Rockaway Beach, OR, 97136 2945 N.W. Jetty Ave., Lincoln City, OR, 97367 70 N.W. Sunset St., Depoe Bay, OR, 97341 232 NW Coast St, Newport, OR, 97365 1555 Hwy. 101 N., Yachats, OR, 97498 855 U.S. 101, Reedsport, OR, 97467 1252 Bay St, Florence, OR, 97439 1485 E 19th Ave, Eugene, OR, 97403 National Forest Development Road 19, Westfir, OR, 97492 65600 Pronghorn Club Drive, Bend, OR, 97702 Terrebonne, OR, 97760 251 E Cascade Ave, Sisters, OR, 97759 919 NW Bond St, Bend, OR, 97701</Address>
-      <Phone>253.284.4750</Phone>
-      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_145,w_300/v1371847023/museum-of-glass-4f5e1b8046d09d675b000290.jpg</Image>
-      <Review>blah</Review>
-      <Url>https://roadtrippers.com/us/tacoma-wa/points-of-interest/museum-of-glass</Url>
-      <Category>place-group icon-cat-accommodation</Category>
-      <Latitude>blah</Latitude>
-      <Longitude>blah</Longitude>
+      <EntityID>1007</EntityID>
+      <Name>Travel Inn Resort</Name>
+      <Description>Strategically located at the gateway to Ocean and Mountain recreation, just 30 minutes away from the Coastal Beaches. Local rivers and streams have Salmon, Steelhead and Trout, while the surrounding forests abound in game birds, deer and elk. Nearby Westport offers some of the best seafood and fishing in the world. Activities at the park include swimming pool, pickle ball and pot lucks.</Description>
+      <Address>801 E Main Street, Elma WA 98541 USA</Address>
+      <Phone>360.482.2888</Phone>
+      <Image>https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1383518985/travel-inn-resort-5276d2ae85c07aef540000be.jpg</Image>
+      <Review>3</Review>
+      <Url>http://www.kmresorts.com/travel-inn-resort</Url>
+      <Category>Hotel</Category>
+      <Latitude>47.0087493</Latitude>
+      <Longitude>-123.3861179</Longitude>
    </Entity>
    <Entity>
       <EntityID>x</EntityID>
@@ -376,5 +405,5 @@
       <Category>place-group icon-cat-food_drink</Category>
       <Latitude>blah</Latitude>
       <Longitude>blah</Longitude>
-   </Entity>
-</Entities>
+  </Entity>
+</EntitiesSample>
