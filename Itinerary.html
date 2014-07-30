@@ -210,6 +210,7 @@
             directionsManager.addWaypoint(myEnd);
             directionsManager.setRequestOptions(options);
             directionsManager.calculateDirections();
+            map.getCredentials(RouteRequest);
         }
 
         function createDirections() {
@@ -271,12 +272,6 @@
                   result.resourceSets[0].resources &&
                   result.resourceSets[0].resources.length > 0) {
 
-                // Set the map view
-               var bbox = result.resourceSets[0].resources[0].bbox;
-               var viewBoundaries = Microsoft.Maps.LocationRect.fromLocations(new Microsoft.Maps.Location(bbox[0], bbox[1]), new Microsoft.Maps.Location(bbox[2], bbox[3]));
-               viewBoundaries.width *= windowWidth / (windowWidth - 700);
-               map.setView({ bounds: viewBoundaries });
-   
 				var points = result.resourceSets[0].resources[0].routePath.line.coordinates;
 				var indices = result.resourceSets[0].resources[0].routePath.generalizations[0].pathIndices;
 				polyline = [];
@@ -495,7 +490,7 @@
              </div>
              <div class="input-group" style='margin-top:2px';>
                  <span class="input-group-addon" style='margin-left:10px;width:58px'>To</span>
-                 <input id="txtEnd" type="text" class="form-control" value="Spokane" style='width:200px;'/>
+                 <input id="txtEnd" type="text" class="form-control" value="Portland" style='width:200px;'/>
              </div>
              <div class="btn-group">
                  <button type="button" class="btn btn-default" onclick="createDirections();" style='width:260px;margin-top:2px'>Build a route</button>
