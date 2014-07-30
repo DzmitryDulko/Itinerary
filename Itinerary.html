@@ -168,7 +168,14 @@
 				showDashboard: false
             });
 
+            MM.Events.addHandler(map, 'click', clearInfoBox);
             Resize();
+        }
+
+        function clearInfoBox(e) {
+            if (e.targetType == "map") {
+                infoBoxLayer.clear();
+            }
         }
 
         function createDirectionsManager(directionsUpdatedCallback) {
